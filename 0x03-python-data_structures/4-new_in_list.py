@@ -6,4 +6,3 @@ def new_in_list(my_list, idx, element):
     else:
         my_list_cp[idx] = element
         return my_list_cp
-
