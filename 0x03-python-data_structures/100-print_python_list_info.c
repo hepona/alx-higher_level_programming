@@ -1,9 +1,11 @@
 #include <Python.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <sys/sysctl.h>
 void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t ln = PyList_Size(p);
-	Py_ssize_t alloced = PyList_GET_SIZE(p);
+	Py_ssize_t alloced = ((PyVarObject*)p)->ob_size;
 	Py_ssize_t i;
 	PyTypeObject *itemType;
 
