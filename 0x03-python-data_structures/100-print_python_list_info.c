@@ -3,14 +3,17 @@
 void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t ln = PyList_Size(p);
-	Py_ssize_t alloced = ((PyObject *)p)->alloced;
-	Py_ssize_t *tp;
-	int i;
+	Py_ssize_t alloced = PyList_GET_SIZE(p);
+	Py_ssize_t i;
+	PyObject *item;
 
-	printf("[*] Size of the Python List = %d\n", ln);
-	print("[*] Allocated = %d\n");
-	for (i = 0 ; i <= ln ; i++)
+	printf("[*] Size of the Python List = %zd\n", ln);
+	printf("[*] Allocated = %zd\n", alloced);
+	for (i = 0 ; i < ln ; i++)
 	{
-		printf("Element %d: %d\n", i, PyList_GetItem(p, i));
+		item = PyList_GetItem(p, i);
+		printf("Element %zd: \n", i);
+		PyObject_Print(item, stdout, Py_PRINT_RAW);
+		printf("\n");
 	}
 }	
