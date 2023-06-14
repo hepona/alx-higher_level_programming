@@ -2,6 +2,8 @@
 def square_matrix_simple(matrix=[]):
     matrix_c = []
     for i in range(len(matrix)):
+        row = []
         for j in range(len(matrix[i])):
-            matrix_c.append(pow(matrix[i][j], 2))
+            row.append(pow(matrix[i][j], 2))
+        matrix_c.append(row)
     return matrix_c
