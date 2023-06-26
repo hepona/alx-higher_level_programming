@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    nw_list=[0] * x
+    c = 0
     try:
         for i in range(0, x):
-            nw_list[i] = my_list[i]
-        return nw_list[i]
+            print("{}".format(my_list[i]), end="")
+            c += 1
     except IndexError:
-        return my_list
+        pass
+    print()
+    return c
