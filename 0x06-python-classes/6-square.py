@@ -6,9 +6,9 @@ class Square:
     """define class attribute"""
 
     def __init__(self, size=0, position=(0, 0)):
-        if not isinstance(value, int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
@@ -16,7 +16,8 @@ class Square:
             len(position) != 2
             or not isinstance(position[0], int)
             or not isinstance(position[1], int)
-            or not position >= 0
+            or not position[0] >= 0
+            or not position[1] >= 0
         ):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
@@ -49,7 +50,8 @@ class Square:
             len(value) != 2
             or not isinstance(value[0], int)
             or not isinstance(value[1], int)
-            or not value >= 0
+            or not value[0] >= 0
+            or not value[1] >= 0
         ):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
