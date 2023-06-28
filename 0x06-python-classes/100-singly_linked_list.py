@@ -40,9 +40,11 @@ class SinglyLinkedList:
 
     def __init__(self):
         self.__head = None
+
     def __str__(self):
         for i in range(head):
             print("{}".format(i))
+
     def sorted_insert(self, value):
         nw_node = Node(value)
         if self.__head is not None or nw_node.data >= self.__head.data:
