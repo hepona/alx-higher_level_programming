@@ -6,8 +6,21 @@ class Square:
     """define class attribute"""
 
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
+        if (
+            len(position) != 2
+            or not isinstance(position[0], int)
+            or not isinstance(position[1], int)
+            or not position >= 0
+        ):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = position
 
     @property
     def size(self):
