@@ -75,6 +75,6 @@ class Rectangle:
         Rectangle.c = Rectangle.c - 1
         print(f"Bye rectangle...")
 
-    @staticmethod
-    def number_of_instances():
-        return Rectangle.c
+    @classmethod
+    def number_of_instances(cls):
+        return cls.c
