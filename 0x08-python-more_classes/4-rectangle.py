@@ -62,6 +62,3 @@ class Rectangle:
             if i != self.height - 1:
                 s += "\n"
         return s
-
-    def __repr__(self):
-        return "<3-rectangle.Rectangle object at 0x7f92a75a2eb8>"
