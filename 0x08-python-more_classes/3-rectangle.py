@@ -6,13 +6,13 @@ class Rectangle:
     """define it's attribut"""
 
     def __init__(self, width=0, height=0):
-        if width is None or not isinstance(width, int):
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
         else:
             self.__width = width
-        if height is None or not isinstance(height, int):
+        if isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
