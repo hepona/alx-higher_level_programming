@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""
+This is a simple module that provides a function that divide matrix.
+"""
 def matrix_divided(matrix, div):
+    '''function that divid matrix'''
     for i in range(len(matrix)):
         if not isinstance(matrix[i], list):
             raise TypeError(
