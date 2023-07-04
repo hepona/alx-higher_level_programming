@@ -12,7 +12,6 @@ ________________
     >>> say_my_name("jojo", 3)     
     Traceback (most recent call last):
     ...
-    raise TypeError("last_name must be a string")
     TypeError: last_name must be a string
     >>> say_my_name(7, "dio")      
     Traceback (most recent call last):
