@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""
+This is a simple module that provides a function that draw a square with symboles.
+"""
+
+
 def print_square(size):
-    ''' function that print square'''
+    """function that print square"""
     if not isinstance(size, int) or (isinstance(size, float) and size < 0):
         raise TypeError("size must be an integer")
     if size < 0:

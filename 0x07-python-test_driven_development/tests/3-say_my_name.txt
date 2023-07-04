@@ -1,0 +1,48 @@
+Using ''say_my_name''
+________________
+
+''say_my_name'' from 3-say_my_name'' module:
+
+''say_my_name'' from the ''3-say_my_name'' module:>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> say_my_name("kiko", "cra")
+My name is kiko cra
+>>> say_my_name("kiko", "5")
+My name is kiko 5
+>>> say_my_name("kiko", 5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\ecole\aLX\alx-higher_level_programming\0x07-python-test_driven_development\3-say_my_name.py", line 12, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name(21, "po")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\ecole\aLX\alx-higher_level_programming\0x07-python-test_driven_development\3-say_my_name.py", line 10, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name(21.3, "po") 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\ecole\aLX\alx-higher_level_programming\0x07-python-test_driven_development\3-say_my_name.py", line 10, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name("21.3", "po") 
+My name is 21.3 po
+>>> say_my_name("21.3", True) 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\ecole\aLX\alx-higher_level_programming\0x07-python-test_driven_development\3-say_my_name.py", line 12, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+>>> say_my_name(False, True)  
+Traceback (most recent call last):   
+  File "<stdin>", line 1, in <module>
+  File "D:\ecole\aLX\alx-higher_level_programming\0x07-python-test_driven_development\3-say_my_name.py", line 10, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+>>> say_my_name(False, "True") 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\ecole\aLX\alx-higher_level_programming\0x07-python-test_driven_development\3-say_my_name.py", line 10, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string

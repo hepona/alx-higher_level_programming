@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-'''
+"""
 This is a simple module that provides a function to add two numbers.
-'''
+"""
+
+
 def add_integer(a, b=98):
-    ''' function that sum two int '''
+    """function that sum two int"""
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
         return
