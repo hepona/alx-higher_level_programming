@@ -38,18 +38,17 @@ a normal text
 >>> text_indentation(" 12..3456.78??9") 
  12.
 
-.
+ .
 
-3456.
+ 3456.
 
-78?
+ 78?
 
-?
+ ?
 
-9
+ 9
 >>> text_indentation(5)                 
 Traceback (most recent call last):
-  
   ...
 TypeError: text must be a string
 >>> text_indentation(c) 
