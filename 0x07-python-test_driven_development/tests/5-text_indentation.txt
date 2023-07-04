@@ -13,40 +13,28 @@ a normal text
 123456,789
 >>> text_indentation("123456.789") 
 123456.
-
+<BLANKLINE>
 789
 >>> text_indentation("123456.78??9") 
 123456.
-
+<BLANKLINE>
 78?
-
+<BLANKLINE>
 ?
-
+<BLANKLINE>
 9
->>> text_indentation("12..3456.78??9") 
-12.
-
-.
-
-3456.
-
-78?
-
-?
-
-9
->>> text_indentation(" 12..3456.78??9") 
+>>> text_indentation(" 12..3456.78??9")
  12.
-
- .
-
- 3456.
-
- 78?
-
- ?
-
- 9
+<BLANKLINE>
+.
+<BLANKLINE>
+3456.
+<BLANKLINE>
+78?
+<BLANKLINE>
+?
+<BLANKLINE>
+9
 >>> text_indentation(5)                 
 Traceback (most recent call last):
   ...
