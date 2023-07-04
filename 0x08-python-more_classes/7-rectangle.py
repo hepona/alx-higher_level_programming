@@ -5,7 +5,8 @@
 class Rectangle:
     """define it's attribut"""
 
-    c = 0
+    number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
@@ -20,7 +21,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
-        Rectangle.c += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -62,18 +63,24 @@ class Rectangle:
         s = ""
         if self.height == 0 or self.width == 0:
             return s
-        for i in range(self.height):
-            s += "#" * self.width
-            if i != self.height - 1:
-                s += "\n"
+        if (isinstance(Rectangle.print_symbol, str)):
+            for i in range(self.height):
+                s += Rectangle.print_symbol * self.width
+                if i != self.height - 1:
+                    s += "\n"
+        elif (isinstance(Rectangle.print_symbol, list)):
+            for i in range(self.height):
+                for sm in Rectangle.print_symbol:
+                    s += sm * self.width
+                if i != self.height - 1:
+                    s += "\n"
         return s
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        Rectangle.c = Rectangle.c - 1
+        Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print(f"Bye rectangle...")
 
-    def number_of_instances():
-        return Rectangle.c
+
