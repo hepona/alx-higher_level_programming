@@ -8,7 +8,7 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for i in text:
-        print("{}".format(text))
+        print("{}".format(i), end="")
         if i in [".", "?", ":"]:
             print("\n")
     print()
