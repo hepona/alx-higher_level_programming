@@ -1,0 +1,62 @@
+Using ''text_indentation''
+________________
+
+''text_indentation'' from 4-text_indentation'' module:
+
+''text_indentation'' from the ''4-text_indentation'' module:
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation("a normal text")
+a normal text
+>>> text_indentation("123456")        
+123456
+>>> text_indentation("123456,789") 
+123456,789
+>>> text_indentation("123456.789") 
+123456.
+
+789
+>>> text_indentation("123456.78??9") 
+123456.
+
+78?
+
+?
+
+9
+>>> text_indentation("12..3456.78??9") 
+12.
+
+.
+
+3456.
+
+78?
+
+?
+
+9
+>>> text_indentation(" 12..3456.78??9") 
+ 12.
+
+.
+
+3456.
+
+78?
+
+?
+
+9
+>>> text_indentation(5)                 
+Traceback (most recent call last):
+  
+  ...
+TypeError: text must be a string
+>>> text_indentation(c) 
+Traceback (most recent call last):
+  ...
+NameError: name 'c' is not defined
+>>> text_indentation("c")
+c
+>>> text_indentation("*-/*")
+*-/*
