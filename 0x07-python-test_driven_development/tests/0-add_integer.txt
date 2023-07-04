@@ -27,3 +27,9 @@
     TypeError: a must be an integer
     >>> add_integer(4)
     102
+    >>> add_integer()
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+    >>> add_integer(5.789, 6.2131)
+    11
