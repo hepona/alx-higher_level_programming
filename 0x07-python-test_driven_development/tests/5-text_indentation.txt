@@ -14,25 +14,34 @@ a normal text
 >>> text_indentation("123456.789") 
 123456.
 <BLANKLINE>
+<BLANKLINE>
 789
 >>> text_indentation("123456.78??9") 
 123456.
 <BLANKLINE>
+<BLANKLINE>
 78?
+<BLANKLINE>
 <BLANKLINE>
 ?
 <BLANKLINE>
+<BLANKLINE>
 9
->>> text_indentation(" 12..3456.78??9")
- 12.
+>>> text_indentation("12..3456.78??9")
+12.
+<BLANKLINE>
 <BLANKLINE>
 .
 <BLANKLINE>
+<BLANKLINE>
 3456.
+<BLANKLINE>
 <BLANKLINE>
 78?
 <BLANKLINE>
+<BLANKLINE>
 ?
+<BLANKLINE>
 <BLANKLINE>
 9
 >>> text_indentation(5)                 
@@ -47,3 +56,18 @@ NameError: name 'c' is not defined
 c
 >>> text_indentation("*-/*")
 *-/*
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation("Holberton. School? How are you: John") 
+Holberton.
+<BLANKLINE>
+<BLANKLINE>
+ School?
+<BLANKLINE>
+<BLANKLINE>
+ How are you:
+<BLANKLINE>
+<BLANKLINE>
+ John
