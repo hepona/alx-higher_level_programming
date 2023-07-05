@@ -47,3 +47,5 @@ Holberton.
 School?
 How are you:
 John
+>>> text_indentation("") 
+

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is a simple module that print text with 2 new lines 
+This is a simple module that print text with 2 new lines
 """
 
 
