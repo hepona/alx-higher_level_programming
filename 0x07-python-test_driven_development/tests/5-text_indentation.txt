@@ -5,7 +5,7 @@ ________________
 
 ''text_indentation'' from the ''4-text_indentation'' module:
 >>> text_indentation = __import__("5-text_indentation").text_indentation
->>> text_indentation("a normal text")
+>>> text_indentation("a normal text")python3 -c 'print(__import__("my_module").__doc__)'
 a normal text
 >>> text_indentation("123456")        
 123456
