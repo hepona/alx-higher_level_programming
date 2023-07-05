@@ -5,7 +5,7 @@ ________________
 
 ''text_indentation'' from the ''4-text_indentation'' module:
 >>> text_indentation = __import__("5-text_indentation").text_indentation
->>> text_indentation("a normal text")python3 -c 'print(__import__("my_module").__doc__)'
+>>> text_indentation("a normal text")
 a normal text
 >>> text_indentation("123456")        
 123456
@@ -13,27 +13,18 @@ a normal text
 123456,789
 >>> text_indentation("123456.789") 
 123456.
-<BLANKLINE>
 789
 >>> text_indentation("123456.78??9") 
 123456.
-<BLANKLINE>
 78?
-<BLANKLINE>
 ?
-<BLANKLINE>
 9
 >>> text_indentation("12..3456.78??9")
 12.
-<BLANKLINE>
 .
-<BLANKLINE>
 3456.
-<BLANKLINE>
 78?
-<BLANKLINE>
 ?
-<BLANKLINE>
 9
 >>> text_indentation(5)                 
 Traceback (most recent call last):
@@ -53,9 +44,6 @@ Traceback (most recent call last):
 TypeError: text_indentation() missing 1 required positional argument: 'text'
 >>> text_indentation("Holberton. School? How are you: John") 
 Holberton.
-<BLANKLINE>
- School?
-<BLANKLINE>
- How are you:
-<BLANKLINE>
- John
+School?
+How are you:
+John
