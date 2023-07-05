@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is a simple module that provides a function that draw a square with symboles.
+function that draw a square with symboles.
 """
 
 
