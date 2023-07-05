@@ -9,13 +9,13 @@ def matrix_divided(matrix, div):
     for i in range(len(matrix)):
         if not isinstance(matrix[i], list):
             raise TypeError(
-                "matrix must be a matrix (list of lists) of integers/floats)"
+                "matrix must be a matrix (list of lists) of integers/floats"
             )
         for j in range(len(matrix)):
             if not isinstance(matrix[i][j], (int, float)):
                 raise TypeError(
                     "matrix must be a \
-matrix (list of lists) of integers/floats)"
+matrix (list of lists) of integers/floats"
                 )
     ln = len(matrix[0])
     for i in matrix:
