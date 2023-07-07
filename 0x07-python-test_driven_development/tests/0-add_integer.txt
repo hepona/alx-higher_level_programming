@@ -38,3 +38,20 @@ This is an exemple text file
     TypeError: add_integer() missing 1 required positional argument: 'a'
     >>> add_integer(5.789, 6.2131)
     11
+    >>> add_integer(float('inf'), 5)    
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+    >>> add_integer(None, 4)         
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    >>> add_integer(5, None)    
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+    >>> add_integer(float('nan'), 8) 
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+

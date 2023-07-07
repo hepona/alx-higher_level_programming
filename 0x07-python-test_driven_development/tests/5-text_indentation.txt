@@ -23,8 +23,8 @@ a normal text
 ?
 <BLANKLINE>
 9
->>> text_indentation(" 12..3456.78??9")
- 12.
+>>> text_indentation("12..3456.78??9")
+12.
 <BLANKLINE>
 .
 <BLANKLINE>
@@ -47,3 +47,17 @@ NameError: name 'c' is not defined
 c
 >>> text_indentation("*-/*")
 *-/*
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation("Holberton. School? How are you: John") 
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+>>> text_indentation("") 
+<BLANKLINE>

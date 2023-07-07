@@ -64,10 +64,10 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return s
         for i in range(self.height):
-            if isinstance(Rectangle.print_symbol, list):
-                s += "".join(Rectangle.print_symbol)
+            if isinstance(self.print_symbol, list):
+                s += "".join(self.print_symbol)
             else:
-                s += Rectangle.print_symbol * self.width
+                s += self.print_symbol * self.width
             if i != self.height - 1:
                 s += "\n"
         return s
