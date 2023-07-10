@@ -46,3 +46,16 @@ Traceback (most recent call last):
   File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 13, in integer_validator
     raise TypeError(name + " must be an integer")
 TypeError: kiko must be an integer
+>>> bg.integer_validator("my_int", 12, jojo)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'jojo' is not defined
+>>> bg.integer_validator("my_int", 12, 9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+>>> bg.integer_validator("bool", false)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'false' is not defined
+>>> bg.integer_validator("integer", 13)
