@@ -4,6 +4,10 @@ Test for print_sorted function
 ''print_sorted'' from the ''1-my_list.py'' module:
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
 >>> my_list.append(1)
 >>> my_list.append(9)
 >>> my_list.append(90)
