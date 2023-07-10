@@ -1,0 +1,19 @@
+''print_sorted''
+
+Test for print_sorted function
+''print_sorted'' from the ''1-my_list.py'' module:
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(9)
+>>> my_list.append(90)
+>>> my_list.append(190)
+>>> my_list.append(7)
+>>> my_list.append(-3)
+>>> my_list.append(0)
+>>> print(my_list)
+[1, 9, 90, 190, 7, -3, 0]
+>>> my_list.print_sorted()
+[-3, 0, 1, 7, 9, 90, 190]
+>>> print(my_list)
+[1, 9, 90, 190, 7, -3, 0]
