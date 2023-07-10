@@ -59,3 +59,12 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'false' is not defined
 >>> bg.integer_validator("integer", 13)
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("width", 89)
+>>> try:
+...     bg.integer_validator("bool", False)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[ValueError] bool must be greater than 0
