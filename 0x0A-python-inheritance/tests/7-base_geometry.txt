@@ -1,0 +1,6 @@
+Using ''base_geometry''
+____________________
+
+This is an exemple text file
+''base_geometry'' from the ''7-base_geometry'' module:
+
