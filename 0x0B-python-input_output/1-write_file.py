@@ -11,7 +11,7 @@ def write_file(filename="", text=""):
         while 1:
             charead = myfile.read(1)
             if charead != '\n':
-                char_num = char_num + 1
+                char_num += 1
             if not charead:
                 break
     return char_num
