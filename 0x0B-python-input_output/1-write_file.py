@@ -8,10 +8,5 @@ def write_file(filename="", text=""):
         myfile.write(text)
     with open(filename, mode = "r", encoding="utf-8") as myfile:
         char_num = 0
-        while 1:
-            charead = myfile.read(1)
-            if charead != '\n':
-                char_num += 1
-            if not charead:
-                break
-    return char_num
+        num_ch = len(myfile.read())
+    return num_ch
