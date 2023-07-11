@@ -2,7 +2,8 @@
 """define function that creates an Object from a “JSON file"""
 
 
+import json
 def load_from_json_file(filename):
     """creates an Object from a “JSON file"""
-    with open(filename, encoder="utc-8", mode="w") as file:
-        json.load(file)
+    with open(filename, encoding = "utf-8", mode = "r") as file:
+        json.dumps(file.read())
