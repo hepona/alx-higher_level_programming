@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""script that adds all arguments to a Python list, and save them in a file"""
 if __name__ == "__main__":
     from sys import argv
     load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
