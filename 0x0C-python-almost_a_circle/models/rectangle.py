@@ -7,7 +7,7 @@ class Rectangle(Base):
     """defie it's attribute"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """constructor"""
+        """initalisation"""
         super().__init__(id)
         if not (isinstance(width, int)):
             raise TypeError("width must be an integer")
