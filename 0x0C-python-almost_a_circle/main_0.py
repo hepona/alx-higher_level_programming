@@ -5,9 +5,7 @@ import subprocess
 
 
 def run_command(cmd):
-    process = subprocess.Popen(
-        cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE
-    )
+    process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output, error = process.communicate()
     return "{}{}".format(output, error)
 
@@ -65,7 +63,7 @@ class Base(Base):
             self.id = 89
         else:
             super().__init__(id)
-"""
+"""    
 
     with open(file_path_to_update, "w") as file:
         file.write(new_content)
