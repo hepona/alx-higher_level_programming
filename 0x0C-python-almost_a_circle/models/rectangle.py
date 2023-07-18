@@ -1,5 +1,42 @@
 #!/usr/bin/python3
-"""define a class Rectangle"""
+"""
+    Represents a rectangle with width, height, position (x, y), and an identifier (id).
+
+    Attributes:
+        __width (int): The width of the rectangle.
+        __height (int): The height of the rectangle.
+        __x (int): The x-coordinate of the top-left corner of the rectangle.
+        __y (int): The y-coordinate of the top-left corner of the rectangle.
+        id (int): The identifier for the rectangle, inherited from the Base class.
+
+    Methods:
+        __init__(self, width, height, x=0, y=0, id=None):
+            Initializes a Rectangle instance with the provided width, height, position, and id.
+
+        width(self):
+            Getter method for retrieving the width of the rectangle.
+
+        width(self, value):
+            Setter method for setting the width of the rectangle.
+
+        height(self):
+            Getter method for retrieving the height of the rectangle.
+
+        height(self, value):
+            Setter method for setting the height of the rectangle.
+
+        x(self):
+            Getter method for retrieving the x-coordinate of the rectangle's position.
+
+        x(self, value):
+            Setter method for setting the x-coordinate of the rectangle's position.
+
+        y(self):
+            Getter method for retrieving the y-coordinate of the rectangle's position.
+
+        y(self, value):
+            Setter method for setting the y-coordinate of the rectangle's position.
+"""
 from base import Base
 
 
