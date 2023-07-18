@@ -94,3 +94,9 @@ class Rectangle(Base):
         """function that prints the Rectangle instance with the character #"""
         for i in range(1, self.height + 1):
             print("#" * self.width)
+
+    def __str__(self):
+        """function that returns txt"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height
+        )
