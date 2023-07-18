@@ -52,10 +52,10 @@ class Rectangle(Base):
     def height(self, value):
         """setter height"""
         if not isinstance(value, int):
-            raise TypeError("height should be a positive number")
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("height cannot be zero or negative.")
-        self._height = value
+            raise ValueError("height must be >0")
+        self.__height = value
 
     @property
     def x(self):
@@ -75,6 +75,7 @@ class Rectangle(Base):
     def y(self):
         """getter y"""
         return self.__y
+
     @y.setter
     def y(self, value):
         """setter y"""
