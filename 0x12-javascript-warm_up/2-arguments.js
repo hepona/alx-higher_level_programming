@@ -7,3 +7,4 @@ if (arg === 2) {
 } else {
   console.log('Arguments found');
 }
+//z
