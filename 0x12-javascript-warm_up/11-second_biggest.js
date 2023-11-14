@@ -6,5 +6,5 @@ if (t.length === 0) {
 } else if (t.length === 1) {
   console.log('1');
 } else {
-  console.log(Math.max(...t) - 1);
+  console.log(Math.max(...t.map(Number)) - 1);
 }
