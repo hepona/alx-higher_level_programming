@@ -18,7 +18,7 @@ if __name__ == "__main__":
         db=db
     )
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE BINARY LEFT(name, 1) = 'N' ORDER BY id")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
     result = cursor.fetchall()
     for row in result:
         print("({}, {})".format(row[0], row[1]))
