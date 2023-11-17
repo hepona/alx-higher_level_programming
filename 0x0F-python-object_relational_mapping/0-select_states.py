@@ -4,13 +4,22 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", port=3306,  user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    db_host = "localhost"
+    db_user = sys.argv[1]
+    db_passwd = sys.argv[2]
+    db = sys.argv[3]
+    port = 3306
+    db = MySQLdb.connect(
+        host=db_host,
+        port=port,
+        user=db_user,
+        passwd=db_passwd,
+        db=db,
+    )
     cursor = db.cursor()
-    query = ("SELECT * FROM states ORDER BY id ")
-    cursor.execute(query)
+    cursor.execute("SELECT * FROM states ORDER BY id ")
     result = cursor.fetchall()
     for row in result:
         print("({}, '{}')".format(row[0], row[1]))
     cursor.close()
     db.close()
-
