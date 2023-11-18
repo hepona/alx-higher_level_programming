@@ -18,11 +18,10 @@ if __name__ == "__main__":
     )
     cursor = db.cursor()
     cursor.execute(
-        "SELECT c.id, c.name, s.name FROM cities c`\
-        JOIN states s ON s.id = c.state_id ORDER BY id "
+        "SELECT c.id, c.name, states.name FROM cities c\
+        JOIN states ON states.id = c.state_id ORDER BY id "
     )
     r = cursor.fetchall()
-    print(r)
     for row in r:
         print("{}".format(row))
     cursor.close()
