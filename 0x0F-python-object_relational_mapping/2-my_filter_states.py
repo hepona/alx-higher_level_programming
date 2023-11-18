@@ -18,10 +18,10 @@ if __name__ == "__main__":
         db=db
     )
     cursor = db.cursor()
-    q = "SELECT * FROM states WHERE name ='"+sys.argv[4]+"' ORDER BY id"
+    q = "SELECT * FROM states WHERE name ='{}' ORDER BY id".format(sys.argv[4])
     cursor.execute(q)
     r = cursor.fetchall()
     for row in r:
-        print("{}".format(row))
+        print(row)
     cursor.close()
     db.close()
