@@ -2,7 +2,6 @@
 """the class definition of a State and an instance Base = declarative_base()"""
 from sqlalchemy import Column, Integer, String, MetaData, create_engine
 from sqlalchemy.ext.declarative import declarative_base
-import sys.argv
 
 m = MetaData()
 Base = declarative_base(metadata=m)
@@ -17,10 +16,5 @@ class State(Base):
         autoincrement=True, nullable=False
     )
     name = Column(String(128), nullable=False)
-
-
-engine = create_engine(
-    "mysql+mysqldb://{}:{}@localhost/{}".format(argv[1], argv[2], argv[3]),
-    pool_pre_ping=True,
-)
+engine = create_engine('sqlite://', echo=True)
 Base.metadata.create_all(engine)
