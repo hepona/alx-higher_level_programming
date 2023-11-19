@@ -15,8 +15,9 @@ if __name__ == "__main__":
     Session = sessionmaker()
     session = Session(bind=engine)
     Base.metadata.create_all(engine)
-    r = session.execute(select(State.id, State.name).where(State.id == 1))
+    r = session.query(State).order_by(State.id).first()
     if not r:
         print("Nothing")
     for row in r:
         print("{}: {}".format(row[0], row[1]))
+    session.close()
