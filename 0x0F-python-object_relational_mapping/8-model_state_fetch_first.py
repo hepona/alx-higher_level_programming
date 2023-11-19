@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """prints the first State object from the database hbtn_0e_6_usa"""
 import sys
+import MySQLdb
 from model_state import Base, State
-from sqlalchemy import create_engine, select, column, text
+from sqlalchemy import create_engine, select, text
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -10,9 +12,10 @@ if __name__ == "__main__":
             sys.argv[1], sys.argv[2], sys.argv[3]
         )
     )
-    with engine.connect() as cn:
-        r = cn.execute(select(State.id, State.name).where(State.id == 1))
-        if r is None:
+    Session = sessionmaker(engine)
+    with Session() as session:
+        r = session.execute(select(State.id, State.name).where(State.id == 1))
+        if not r:
             print("Nothing")
         for row in r:
             print("{}: {}".format(row[0], row[1]))
