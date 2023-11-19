@@ -9,14 +9,22 @@ argument from the database hbtn_0e_6_usa"""
 
 if __name__ == "__main__":
     engine = create_engine(
-        "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
-            sys.argv[1], sys.argv[2], sys.argv[3]
-        )
+        "mysql+mysqldb://%(user)s:%(password)s@localhost:3306/%(database)s"
+        % {
+            "user": sys.argv[1],
+            "password": sys.argv[2],
+            "database": sys.argv[3],
+        }
     )
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).filter(State.name == sys.argv[4]).\
-        params(name=sys.argv[4]).order_by(State.id).first()
+    state = (
+        session.query(State)
+        .filter(State.name == sys.argv[4])
+        .order_by(State.id)
+        .first()
+    )
+
     if not state:
         print("Not found")
     else:
