@@ -12,10 +12,11 @@ if __name__ == "__main__":
             sys.argv[1], sys.argv[2], sys.argv[3]
         )
     )
-    Session = sessionmaker(engine)
-    with Session() as session:
-        r = session.execute(select(State.id, State.name).where(State.id == 1))
-        if not r:
-            print("Nothing")
-        for row in r:
-            print("{}: {}".format(row[0], row[1]))
+    Session = sessionmaker()
+    session = Session(bind=engine)
+    Base.metadata.create_all(engine)
+    r = session.execute(select(State.id, State.name).where(State.id == 1))
+    if not r:
+        print("Nothing")
+    for row in r:
+        print("{}: {}".format(row[0], row[1]))
