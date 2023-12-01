@@ -6,7 +6,7 @@ from sys import argv
 
 if __name__ == "__main__":
     res = requests.get(argv[1])
-    if res.status_code == 200:
+    if res.status_code < 400:
         print(res.text)
     else:
         print(f"Error: {res.status_code}")
