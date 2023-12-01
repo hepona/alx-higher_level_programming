@@ -6,7 +6,6 @@ from sys import argv
 
 if __name__ == "__main__":
     res = requests.get(argv[1])
-    res.raise_for_statue()
     if res.status_code == 200:
         print(res.text)
     else:
