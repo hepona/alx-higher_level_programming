@@ -9,11 +9,11 @@ if __name__ == "__main__":
         q = ""
     else:
         q = argv[1]
-    res = requests.post("http://0.0.0.0:5000/search_user", q)
-    if isinstance(res.text, dict):
+    res = requests.post("http://0.0.0.0:5000/search_user", {"q": q})
+    r = res.json()
+    if not isinstance(r, dict):
         print("Not a valid JSON")
-    if len(res.text) == 0 or q == "":
+    elif not r:
         print("No result")
     else:
-        print("[{}] {}".format(res.headers.get("id"), res.headers.get("name")))
-    print(res.text)
+        print("[{}] {}".format(r["id"], r["name"]))
