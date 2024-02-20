@@ -7,7 +7,7 @@ request(url, (err, res, body) => {
     let count = 0;
     const ch = JSON.parse(body).results;
     for (let i = 0; i < ch.length; i++) {
-      if ((ch[i].characters).includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+      if ((ch[i].characters).includes("https://swapi-api.alx-tools.com/api/people/18/")) {
         count++;
       }
     }
